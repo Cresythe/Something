@@ -11,7 +11,9 @@
 		<script type="module">
 			import * as THREE from 'https://unpkg.com/three/build/three.module.js';
 
-			// Our Javascript will go here.
+            const scene = new THREE.Scene(); 
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / widow.innerHeight, 0.1, 1000); 
+            
 		</script>
 	</body>
 </html>

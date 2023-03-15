@@ -19,13 +19,8 @@
             document.body.appendChild(renderer.domElement); 
 
             const geometry = new  THREE.BoxGeometry(1, 1, 1); 
-            const material = new THREE.MeshBasicMaterial( { color: 0x00ff00} ); 
-            const wireframe = new THREE.WireframeGeometry(geometry);
-            const line = new THREE.LineSegments( wireframe );
-                line.material.depthTest = false;
-                line.material.opacity = 0.25;
-                line.material.transparent = true;
-            const cube = new THREE.Mesh( geometry, material, line); 
+            const material = new THREE.LineBasicMaterial( { color: 0x00ff00} ); 
+            const cube = new THREE.Mesh( geometry, material); 
             scene.add(cube); 
 
             camera.position.z = 5; 

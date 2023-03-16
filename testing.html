@@ -24,7 +24,7 @@
             const cube = new THREE.Mesh( geometry, material); 
 
             const sphere = new THREE.Mesh( new THREE.SphereGeometry(5, 15, 6), material); 
-                sphere.position.z = 20; 
+            sphere.position.y = 20; 
             scene.add(cube, sphere); 
 
             camera.position.z = 50; 

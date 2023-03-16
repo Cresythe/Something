@@ -22,13 +22,19 @@
             const material = new THREE.MeshBasicMaterial();
             material.wireframe = true;  
             const cube = new THREE.Mesh( geometry, material); 
-            scene.add(cube); 
+
+            const sphere = new THREE.Mesh( THREE.SphereGeometry(5, 15, 6), material); 
+
+            scene.add(cube, sphere); 
 
             camera.position.z = 50; 
             function animate() {
                 requestAnimationFrame(animate); 
                 cube.rotation.x += 0.01;
                 cube.rotation.y += 0.01;
+                sphere.rotation.x += .01; 
+                sphere.rotation.y += .01;
+                sphere.position.z = 15 
                 renderer.render( scene, camera); 
             } 
             animate(); 

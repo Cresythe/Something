@@ -23,7 +23,7 @@
             material.wireframe = true;  
             const cube = new THREE.Mesh( geometry, material); 
 
-            const sphere = new THREE.Mesh( THREE.SphereGeometry(5, 15, 6), material); 
+            const sphere = new THREE.Mesh( new THREE.SphereGeometry(5, 15, 6), material); 
 
             scene.add(cube, sphere); 
 

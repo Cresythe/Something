@@ -19,7 +19,7 @@
             document.body.appendChild(renderer.domElement); 
 
             const geometry = new  THREE.CubeGeometry(10, 10, 10); 
-            const material = new THREE.MeshLineMaterial(); 
+            const material = new THREE.LineBasicMaterial(); 
             const cube = new THREE.Mesh( geometry, material); 
             scene.add(cube); 
 

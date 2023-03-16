@@ -20,7 +20,8 @@
 
             const geometry = new  THREE.CubeGeometry(10, 10, 10); 
             const material = new THREE.MeshNormalMaterial(); 
-            const cube = new THREE.Mesh( geometry, material); 
+            const material1 = new THREE.MeshLineMaterial(); 
+            const cube = new THREE.Mesh( geometry, material, material1); 
             scene.add(cube); 
 
             camera.position.z = 50; 

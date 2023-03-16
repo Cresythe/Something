@@ -6,4 +6,13 @@ html, body {
 header {
     display:flex; 
     border-bottom: 2px soild;
+    margin-left: 35%; 
+}
+li {
+    padding-left: 28%;
+    font-size: larger;
+}
+a {
+    outline: none;
+    text-decoration: none;
 }

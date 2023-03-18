@@ -43,14 +43,14 @@
 			controls.update(); 
 
 			//spotlight
-			const spotLight = new THREE.SpotLight(0xffffff); 
+			let spotLight = new THREE.SpotLight(0xffffff); 
 			spotLight.castShadow = true; 
 			
 			spotLight.shadow.camera.near = 500;
 			spotLight.shadow.camera.far = 4000;
 			spotLight.shadow.camera.fov = 30;
-
-			scene.add(spotLight); 
+			let helpLight = new THREE.SpotLightHelper(spotLight); 
+			scene.add(helpLight); 
 
 
 			const sphereGeometry = new THREE.SphereGeometry( 5, 32, 32 );
@@ -73,7 +73,7 @@
 
 				spotLight.position.x = Math.cos( time ) * 25;
 				spotLight.position.z = Math.sin( time ) * 25;
-				spotLight.update(); 
+				helpLight.update(); 
 				renderer.render(scene, camera);
 			}
 			animate();

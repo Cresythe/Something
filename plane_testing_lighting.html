@@ -39,14 +39,14 @@
             const controls = new OrbitControls(camera, renderer.domElement); 
             controls.minDistance = 20; 
 			controls.maxDistance = 200; 
-			controls.MaxPolarAngle = Math.PI; 
+			controls.MaxPolarAngle = Math.PI/2; 
 			controls.target.set(5, 32, 32); 
 			controls.update(); 
 
 			//spotlight
 			let spotLight = new THREE.SpotLight(0xffffff, 100); 
 			spotLight.castShadow = true; 
-			
+			spotLight.position.set(0, 100, 0); 
 			spotLight.shadow.camera.near = 500;
 			spotLight.shadow.camera.far = 4000;
 			spotLight.shadow.camera.fov = 30;

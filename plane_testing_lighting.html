@@ -57,10 +57,10 @@
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(100,100); 
 			planeGeo.rotateX(-Math.PI / 2); 
-			const material = new THREE.ShadowMaterial(0xFFFFFF); 
+			const material = new THREE.MeshStandardMaterial(0xFFFFFF); 
 			material.opacity = 0.2; 
 			let plane = new THREE.Mesh(planeGeo, material);
-			plane.position.y = -100; 
+			plane.position.y = -50; 
 			plane.receiveShadow = true; 
 
 			scene.add(plane); 

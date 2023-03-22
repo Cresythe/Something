@@ -85,8 +85,8 @@
 				requestAnimationFrame(animate)
 				const time = performance.now() / 3000;
 
-				spotLight.position.x = Math.cos( time ) * 25;
-				spotLight.position.z = Math.sin( time ) * 25;
+				light.position.x = Math.cos( time ) * 25;
+				light.position.z = Math.sin( time ) * 25;
 				lightHelper.update(); 
 				renderer.render(scene, camera);
 			}

@@ -28,7 +28,10 @@
 
             const dodecahedron = new THREE.Mesh( new THREE.DodecahedronGeometry(8,1), material);
             dodecahedron.position.y = -20; 
-            scene.add(cube, sphere, dodecahedron); 
+
+            const torusKnot = new THREE.Mesh( new THREETorusKnotGeometry(10, 3, 80, 12), material); 
+            torusKnot.position.x = 20; 
+            scene.add(cube, sphere, dodecahedron, torusKnot); 
 
 
 

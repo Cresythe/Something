@@ -46,7 +46,7 @@
 			
 			//coordinate helper
 			const coordinate = new THREE.AxesHelper(5);
-			scene.add(coordinate);  
+			//scene.add(coordinate);  
 			
 			//spotLight
 			let light  = new THREE.SpotLight({color: 0xF9F569}); 
@@ -66,8 +66,17 @@
 			const material = new THREE.MeshPhongMaterial(); 
 			let plane = new THREE.Mesh(planeGeo, material);
 			plane.position.y = -50; 
-			plane.receiveShadow = true; 
+			plane.receiveShadow = true;
+			
+			//cube
 
+			let cubeGeo = new THREE.BoxGeometry(10,10,10); 
+			const cubicMaterial = new THREE.MeshPhongMaterial(); 
+			let cube = new THREE.Mesh(cubeGeo, cubicMaterial); 
+			cube.position.y = -35; 
+			cube.receiveShadow = true;
+			cube.castShadow = true; 
+			scene.add(cube); 
 			scene.add(plane); 
 
 			

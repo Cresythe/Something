@@ -53,8 +53,11 @@
 			light.intensity
 			light.castShadow = true; 
 			light.penumbra = 0.2; 
-			light.distance = 100; 
-			scene.add(light); 
+			light.distance = 100;
+			
+			//light helper
+			let lightHelper = new THREE.SpotLightHelper(light); 
+			scene.add(lightHelper); 
 
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(2000,2000); 

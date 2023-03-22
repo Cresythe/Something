@@ -32,8 +32,8 @@
             const torusKnot = new THREE.Mesh( new THREE.TorusKnotGeometry(8, 3, 80, 12), material); 
             torusKnot.position.set(35, 20, 0); 
 
-            const capsule = new THREE.Mesh(new THREE.CapsuleGeometry(3, 3, 6, 20), material)
-            capsule.position.set(35, -20); 
+            const capsule = new THREE.Mesh(new THREE.CapsuleGeometry(5, 5, 6, 20), material)
+            capsule.position.set(35, 0, 0); 
             scene.add(cube, sphere, dodecahedron, torusKnot, capsule); 
 
 
@@ -49,6 +49,8 @@
                 dodecahedron.rotation.y +=.01; 
                 torusKnot.rotation.x += .01
                 torusKnot.rotation.y += .01
+                capsule.rotation.x += .01
+                capsule.rotation.y += .01
                 renderer.render( scene, camera); 
             } 
             animate(); 

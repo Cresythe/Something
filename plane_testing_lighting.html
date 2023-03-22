@@ -31,6 +31,7 @@
             const renderer = new THREE.WebGLRenderer();
 			renderer.shadowMap.enabled = true;
 			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+			renderer.outputEncoding = THREE.sRGBEncoding;
             
 			renderer.setSize( window.innerWidth, window.innerHeight); 
             document.body.appendChild( renderer.domElement); 
@@ -46,19 +47,12 @@
 			//coordinate helper
 			const coordinate = new THREE.AxesHelper(5);
 			scene.add(coordinate);  
-			//directional light
-			let light = new THREE.DirectionalLight(0xFFFFFF, 1.0);
-			light.position.set(3, 10, 1); 
-			light.target.position.set(0,0,0); 
-
-			scene.add(light); 
-			scene.add(light.target); 
+			
 
 			//plane
-			let planeGeo = new THREE.PlaneGeometry(100,100); 
+			let planeGeo = new THREE.PlaneGeometry(2000,2000); 
 			planeGeo.rotateX(-Math.PI / 2); 
-			const material = new THREE.MeshStandardMaterial(0xFFFFFF); 
-			material.opacity = 0.2; 
+			const material = new THREE.MeshPhongMaterial(); 
 			let plane = new THREE.Mesh(planeGeo, material);
 			plane.position.y = -50; 
 			plane.receiveShadow = true; 

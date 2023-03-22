@@ -50,10 +50,10 @@
 			
 			//spotLight
 			let light  = new THREE.SpotLight({color: 0xF9F569}); 
-			light.intensity
+			light.intensity = .5; 
 			light.castShadow = true; 
 			light.penumbra = 0.2; 
-			//light.distance = 100;
+			light.distance = 300;
 			light.position.set(3, 50, 5);
 			
 			//light helper

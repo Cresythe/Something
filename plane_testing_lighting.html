@@ -50,11 +50,11 @@
 			
 			//spotLight
 			let light  = new THREE.SpotLight({color: 0xF9F569}); 
-			light.intensity = .5; 
+			light.intensity = 1; 
 			light.castShadow = true; 
-			light.penumbra = 0.2; 
+			light.penumbra = 0.15; 
 			light.distance = 300;
-			light.position.set(3, 50, 5);
+			light.position.set(3, 100, 5);
 			
 			//light helper
 			let lightHelper = new THREE.SpotLightHelper(light); 
@@ -70,13 +70,13 @@
 			plane.receiveShadow = true;
 			
 			//cube
-
 			let cubeGeo = new THREE.BoxGeometry(10,10,10); 
 			const cubicMaterial = new THREE.MeshPhongMaterial(); 
 			let cube = new THREE.Mesh(cubeGeo, cubicMaterial); 
 			cube.position.y = -35; 
 			cube.receiveShadow = true;
 			cube.castShadow = true; 
+			cube.position.set(10,0,5); 
 			scene.add(cube); 
 			scene.add(plane); 
 

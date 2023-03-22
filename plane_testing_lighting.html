@@ -87,6 +87,7 @@
 
 				spotLight.position.x = Math.cos( time ) * 25;
 				spotLight.position.z = Math.sin( time ) * 25;
+				lightHelper.update(); 
 				renderer.render(scene, camera);
 			}
 			animate();

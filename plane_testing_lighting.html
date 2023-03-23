@@ -53,7 +53,7 @@
 			light.intensity = 1; 
 			light.castShadow = true; 
 			light.penumbra = 0.25; 
-			light.distance = 250;
+			light.distance = 200;
 			light.angle = .35; 
 			light.position.set(3, 100, 5);
 			
@@ -71,7 +71,7 @@
 			plane.receiveShadow = true;
 			
 			//cube
-			let cubeGeo = new THREE.BoxGeometry(10,10,10); 
+			let cubeGeo = new THREE.BoxGeometry(20,20,20); 
 			const cubicMaterial = new THREE.MeshPhongMaterial(); 
 			let cube = new THREE.Mesh(cubeGeo, cubicMaterial); 
 			cube.position.y = -35; 

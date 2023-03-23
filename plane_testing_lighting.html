@@ -54,13 +54,13 @@
 			light.penumbra = 0.25; 
 			light.distance = 250;
 			light.angle = .35; 
-			light.position.set(30, 100, 30); 
+			light.position.set(300, 50, 30); 
 			light.target.position.set(0,0,0); 
 			//light helper
 			let lightHelper = new THREE.SpotLightHelper(light); 
 			scene.add(light.target);
 			scene.add(light);
-			//scene.add(lightHelper); 
+			scene.add(lightHelper); 
 
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(2000,2000); 

@@ -49,9 +49,9 @@
 			//scene.add(coordinate);  
 			
 			//spotLight
-			let light  = new THREE.SpotLight(0xffdb4d,1.5);  
+			let light  = new THREE.SpotLight(0xffdb4d,2);  
 			light.castShadow = true; 
-			light.penumbra = 0.25; 
+			light.penumbra = 0.55; 
 			light.distance = 250;
 			light.angle = .35; 
 			light.position.set(30, 150, 50); 
@@ -65,7 +65,7 @@
 			//other Spotlight 
 			let light2 = new THREE.SpotLight(0x80ffbf, 2); 
 			light2.castShadow = true; 
-			light2.penumbra = .25; 
+			light2.penumbra = .45; 
 			light2.distance = 250; 
 			light2.angle = .45;
 			light2.position.set(-30, 150, -50); 

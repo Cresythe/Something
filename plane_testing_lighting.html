@@ -62,6 +62,16 @@
 			scene.add(light);
 			//scene.add(lightHelper); 
 
+			//other Spotlight 
+			let light2 = new THREE.SpotLight(0x80ffbf, 1.5); 
+			light2.castShadow = true; 
+			light2.penumbra = .35; 
+			light2.distance = 250; 
+			light2.angle = .45;
+			light2.position.set(-30, 150, -50); 
+			
+			scene.add(light2); 
+
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(2000,2000); 
 			planeGeo.rotateX(-Math.PI / 2); 
@@ -94,6 +104,10 @@
 
 				light.position.x = Math.cos( time ) * 25;
 				light.position.z = Math.sin( time ) * 25;
+
+				light2.position.x = Math.cos( time ) * 25;
+				light2.position.z = Math.sin( time ) * 25;
+				
 				lightHelper.update(); 
 				renderer.render(scene, camera);
 			}

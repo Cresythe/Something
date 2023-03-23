@@ -39,7 +39,7 @@
             //controls for camera
             const controls = new OrbitControls(camera, renderer.domElement); 
             controls.minDistance = 20; 
-			controls.maxDistance = 200; 
+			controls.maxDistance = 300; 
 			controls.MaxPolarAngle = Math.PI/2; 
 			controls.target.set(0, 0, 0); 
 			controls.update(); 
@@ -49,12 +49,12 @@
 			//scene.add(coordinate);  
 			
 			//spotLight
-			let light  = new THREE.SpotLight(0xff9933,1.5);  
+			let light  = new THREE.SpotLight(0xffdb4d,1.5);  
 			light.castShadow = true; 
 			light.penumbra = 0.25; 
 			light.distance = 250;
 			light.angle = .35; 
-			light.position.set(3, 150, 5); 
+			light.position.set(30, 100, 30); 
 			light.target.position.set(0,0,0); 
 			//light helper
 			let lightHelper = new THREE.SpotLightHelper(light); 

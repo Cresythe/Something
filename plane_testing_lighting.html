@@ -116,7 +116,8 @@
 			scene.add(sphere); 
 
 			//cylinder 
-			let cylinder = new THREE.mesh(new THREE.CylinderGeometry(6, 6, 10), cubicMaterial); 
+			let cyGeo = new THREE.CylinderGeometry(6, 6, 10, 32); 
+			let cylinder = new THREE.mesh(cyGeo, cubicMaterial); 
 			cylinder.receiveShadow = true; 
 			cylinder.castShadow = true; 
 			cylinder.position.set(300, 0, 50); 

@@ -89,11 +89,6 @@
 			rectLight.position.set(100, 0, 0);
 			scene.add(rectLight); 
 
-			//RectArea lightHelper
-
-			let RectHelper = new THREE.RectAreaLightHelper(rectLight); 
-			scene.add(RectHelper); 
-
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(2000,2000); 
 			planeGeo.rotateX(-Math.PI / 2); 

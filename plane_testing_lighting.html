@@ -49,7 +49,7 @@
 			//scene.add(coordinate);  
 			
 			//spotLight
-			let light  = new THREE.SpotLight(0xffdb4d,3);  
+			let light  = new THREE.SpotLight(0xffdb4d,4);  
 			light.castShadow = true; 
 			light.penumbra = 0.55; 
 			light.distance = 250;
@@ -63,7 +63,7 @@
 			//scene.add(lightHelper); 
 
 			//other Spotlight 
-			let light2 = new THREE.SpotLight(0x80ffbf, 3); 
+			let light2 = new THREE.SpotLight(0x80ffbf, 4); 
 			light2.castShadow = true; 
 			light2.penumbra = .45; 
 			light2.distance = 250; 
@@ -75,7 +75,7 @@
 
 			//Ambient Light
 			let ambientLight = new THREE.AmbientLight(0x404040); 
-			ambientLight.intensity = .15; 
+			ambientLight.intensity = .05; 
 			ambientLight.isAmbientLight = true; 
 
 			scene.add(ambientLight); 

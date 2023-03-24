@@ -119,6 +119,9 @@
 
 			let icosahedron = new THREE.IcosahedronGeometry(10, 0); 
 			const icosahedronShape = new THREE.Mesh(icosahedron, cubicMaterial); 
+			icosahedronShape.castShadow = true; 
+			icosahedronShape.receiveShadow = true; 
+			icosahedronShape.position.set(300, 0 , 50); 
 			scene.add(icosahedronShape);
 			
 

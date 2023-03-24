@@ -26,7 +26,7 @@
 
             const scene = new THREE.Scene(); 
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.set( -10, 0, 100); 
+            camera.position.set( -13, 0, 100); 
             //renderer for the scene
             const renderer = new THREE.WebGLRenderer();
 			renderer.shadowMap.enabled = true;
@@ -86,7 +86,7 @@
 			const height = 75; 
 			const strength = 2; 
 			let rectLight = new THREE.RectAreaLight(0xffffff, strength, width, height)
-			rectLight.position.set(100, 0, 0);
+			rectLight.position.set(300, 0, 0);
 			scene.add(rectLight); 
 
 			//plane
@@ -114,6 +114,15 @@
 			sphere.castShadow = true; 
 			sphere.position.set(-35, 0 , 0); 
 			scene.add(sphere); 
+
+			//cylinder 
+			const cyMaterial = new THREE.MeshStandardGeomety(); 
+			let cylinder = new THREE.mesh(new THREE.CylinderGeometry(6, 6, 10), cyMaterial); 
+			cylinder.receiveShadow = true; 
+			cylinder.castShadow = true; 
+			cylinder.position.set(300, 0, 50); 
+			 
+			scene.add(cylinder); 
 
 			function animate() {
 				requestAnimationFrame(animate);

@@ -79,6 +79,21 @@
 			ambientLight.isAmbientLight = true; 
 
 			scene.add(ambientLight); 
+
+			//rectArea Light 
+
+			const width = 25; 
+			const height = 75; 
+			const strength = 2; 
+			let rectLight = new THREE.RectAreaLight(0xffffff, strength, width, height)
+			rectLight.position.set(100, 0, 0);
+			scene.add(rectLight); 
+
+			//RectArea lightHelper
+
+			let RectHelper = new THREE.RectAreaLightHelper(rectLight); 
+			rectLight.add(RectHelper); 
+
 			//plane
 			let planeGeo = new THREE.PlaneGeometry(2000,2000); 
 			planeGeo.rotateX(-Math.PI / 2); 

@@ -80,13 +80,17 @@
 
 			scene.add(ambientLight); 
 
-			//rectArea Light 
+			//point light
+			let pointLight = new THREE.PointLight(0xff0000, 2, 100); 
+			pointLight.position.set(300, 0, 60); 
+			pointLight.castShadow = true; 
 
+			//rectArea Light 
 			const width = 25; 
 			const height = 75; 
 			const strength = 2; 
 			let rectLight = new THREE.RectAreaLight(0xffffff, strength, width, height)
-			rectLight.position.set(300, 0, 0);
+			rectLight.position.set(150, 0, 0);
 			scene.add(rectLight); 
 
 			//plane

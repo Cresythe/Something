@@ -47,7 +47,8 @@
 			//coordinate helper
 			const coordinate = new THREE.AxesHelper(5);
 			//scene.add(coordinate);  
-			
+			//random sphere used for point lights
+			const sphere2 = new THREE.SphereGeometry(.5, 16, 8); 
 			//spotLight
 			let light  = new THREE.SpotLight(0xffdb4d,4);  
 			light.castShadow = true; 
@@ -82,8 +83,9 @@
 
 			//point light
 			let pointLight = new THREE.PointLight(0xff0000, 2, 100); 
-			pointLight.position.set(300, 0, 60); 
+			pointLight.position.set(300, 0, 0); 
 			pointLight.castShadow = true; 
+			pointLight.add(new THREE.Mesh(sphere2, new THREE.MeshBasicMaterial(0x80ff80))); 
 			scene.add(pointLight); 
 			//rectArea Light 
 			const width = 25; 

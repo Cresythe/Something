@@ -130,6 +130,16 @@
 			icosahedronShape.position.set(300, 0 , -50); 
 			scene.add(icosahedronShape);
 			
+			window.addEventListener( 'resize', onWindowResize );
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
 
 			function animate() {
 				requestAnimationFrame(animate);

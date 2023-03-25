@@ -142,6 +142,11 @@
 				light2.position.z = Math.sin( time ) * -15;
 				
 				lightHelper.update(); 
+				
+				const delta = clock.getDelta();
+				if ( object ) object.rotation.y -= 0.5 * delta;
+				pointLight.position.x = Math.sin( time * 0.7 ) * 30;
+				
 				renderer.render(scene, camera);
 			}
 			animate();

@@ -1,4 +1,4 @@
-import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //Variables
 let sun, planet1, planet2, renderer, camera, scene, orbit, ambLight; 
@@ -12,12 +12,7 @@ document.body.appendChild(renderer.domElement);
 scene = new THREE.Scene(); 
 
 //camera
-camera = new THREE.PerspectiveCamera(
-    45, 
-    window.innerWidth/window.innerHeight, 
-    0.1, 
-    1000
-);
+camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
 camera.position.set(30, 0, -20);
 
 //camera controls

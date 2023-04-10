@@ -39,7 +39,7 @@ sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31), material );
 scene.add(sun); 
 
 window.addEventListener( 'resize', onWindowResize );
-
+animate(); 
 function onWindowResize() {
 
 	camera.aspect = window.innerWidth / window.innerHeight;

@@ -1,4 +1,4 @@
-import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.151.3/build/three.module.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 //Variables
 let sun, planet1, planet2, renderer, camera, scene, orbit, ambLight; 

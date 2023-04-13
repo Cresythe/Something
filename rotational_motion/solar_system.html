@@ -26,6 +26,9 @@
 	//Variables 
 	let sun, planet1, planet2, camera, scene, orbit, ambLight, renderer; 
 	let material = new THREE.MeshPhongMaterial();
+	
+	//Light Variables
+	let sunLight; 
 	//Renderer
 	renderer = new THREE.WebGLRenderer(); 
 	renderer.setSize(window.innerWidth, window.innerHeight); 
@@ -49,12 +52,15 @@
 	orbit.MaxDistance = 500; 
 
 	//lights 
-	ambLight = new THREE.AmbientLight(0x333333)
+	ambLight = new THREE.AmbientLight(0x333333);
 	scene.add(ambLight); 
 
+	sunLight = new THREE.PointLight(0xffd633, 2, 100);
+	sunLight.add(sun); 
+	scene.add(sunLight);  
 	//Planets 
 	sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31), material );
-	scene.add(sun); 
+	//scene.add(sun); 
 
 	window.addEventListener( 'resize', onWindowResize );
 	animate(); 

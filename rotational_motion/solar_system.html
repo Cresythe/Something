@@ -60,7 +60,7 @@
 	scene.add(sunLight);  
 	//Planets 
 	sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31), material );
-	//scene.add(sun); 
+	scene.add(sun); 
 
 	window.addEventListener( 'resize', onWindowResize );
 	animate(); 

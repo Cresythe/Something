@@ -31,6 +31,9 @@
 	let sunLight; 
 	//Renderer
 	renderer = new THREE.WebGLRenderer(); 
+	renderer.shadowMap.enabled = true;
+	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+	renderer.outputEncoding = THREE.sRGBEncoding;
 	renderer.setSize(window.innerWidth, window.innerHeight); 
 	document.body.appendChild(renderer.domElement); 
 
@@ -56,6 +59,7 @@
 	scene.add(ambLight); 
 
 	sunLight = new THREE.PointLight(0xffd633, 2, 100);
+	sunLight.castShadow = true; 
 	sunLight.add(sun); 
 	scene.add(sunLight);  
 	//Planets 

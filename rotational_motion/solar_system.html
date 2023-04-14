@@ -63,7 +63,8 @@
 	sunLight.add(sun); 
 	scene.add(sunLight);  
 	//Planets 
-	sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31), material );
+	let sunMaterial = new THREE.MeshStandardMaterial(0xffd633); 
+	sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31),sunMaterial);
 	scene.add(sun); 
 
 

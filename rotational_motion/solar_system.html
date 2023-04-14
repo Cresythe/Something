@@ -24,7 +24,7 @@
 	import * as THREE from 'three';
 	import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 	//Variables 
-	let sun, planet1, planet2, camera, scene, orbit, ambLight, renderer; 
+	let sun, planet1, planet2, camera, scene, orbit, ambLight, renderer, plane; 
 	let material = new THREE.MeshPhongMaterial();
 	
 	//Light Variables
@@ -65,6 +65,15 @@
 	//Planets 
 	sun = new THREE.Mesh(new THREE.SphereGeometry(30, 60, 31), material );
 	scene.add(sun); 
+
+
+	//The floor space has
+	let materialPlane = new THREE.MeshStandardMaterial(0x7a7a52); 
+	plane = new THREE.Mesh(new THREE.PlaneGeometry(2000,2000), materialPlane); 
+	plane.rotateX(-Math.PI / 2);
+	plane.position.set(0,-10,0); 
+	plane.receiveShadow = true; 
+	scene.add(plane); 
 
 	window.addEventListener( 'resize', onWindowResize );
 	animate(); 

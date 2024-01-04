@@ -55,8 +55,8 @@
 			scene.add(ambientLight);
 	
             //Plane
-            let PlaneGeo = new THREE.PlaneGeometry(2000,2000);
-			PlaneGeo.rotateX(-Math.PI /2); 
+            let planeGeo = new THREE.PlaneGeometry(2000,2000);
+			planeGeo.rotateX(-Math.PI /2); 
 			const material = new THREE.MeshStandardMaterial(0x7a7a52);
 			let floor1 = new THREE.Mesh(planeGeo, material); 
 			floor1.position.y = -50; 

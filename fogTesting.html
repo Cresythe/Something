@@ -23,6 +23,7 @@
 		<script type="module">
 			import * as THREE from 'three';
             import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+			import WebGL from 'three/addons/capabilities/WebGL.js';
 
             const scene = new THREE.Scene(); 
             //for foreground fog
@@ -34,7 +35,6 @@
             const renderer = new THREE.WebGLRenderer();
 			renderer.shadowMap.enabled = true;
 			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-			renderer.outputColorSpace = THREE.sRGBEncoding;
             
 			renderer.setSize( window.innerWidth, window.innerHeight); 
             document.body.appendChild( renderer.domElement); 
@@ -84,7 +84,16 @@
 
 				renderer.render(scene, camera);
 			}
-			animate();
+			if ( WebGL.isWebGLAvailable() ) {
+
+				// Initiate function or other initializations here		
+				animate();
+			
+			} else {			
+
+				const warning = WebGL.getWebGLErrorMessage();					
+				document.getElementById( 'module' ).appendChild( warning );
+			}
 		</script>
 	</body>
 </html>
